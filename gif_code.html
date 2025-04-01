@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random GIF Redirect</title>
+    <script type="text/javascript">
+        // Array of your 10 GIF URLs from GitHub
+        const gifs = [
+            "https://github.com/Kerbooble/Drunken_Walk_Gifs/blob/0fa722e4b39d062b239b57ed745077b7a0bc5c24/drunk_walk_multiple_levels_with_legend(1).gif",
+            "https://github.com/Kerbooble/Drunken_Walk_Gifs/blob/0fa722e4b39d062b239b57ed745077b7a0bc5c24/drunk_walk_multiple_levels_with_legend(2).gif",
+            "https://github.com/Kerbooble/Drunken_Walk_Gifs/blob/0fa722e4b39d062b239b57ed745077b7a0bc5c24/drunk_walk_multiple_levels_with_legend.gif"
+        ];
+
+        // Randomly pick a GIF from the array
+        const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+
+        // Redirect to the chosen GIF
+        window.location.href = randomGif;
+    </script>
+</head>
+<body>
+    <p>Redirecting you to a random GIF...</p>
+</body>
+</html>
