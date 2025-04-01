@@ -1,1 +1,0 @@
-# Drunken_Walk_Gifs
