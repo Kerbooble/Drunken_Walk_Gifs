@@ -18,15 +18,15 @@
         const timestamp = new Date().getTime();
         const randomNumber = Math.random();
 
-        // Construct the URL with both timestamp and random number to ensure no caching
-        const randomGifWithTimestamp = randomGif + '&t=' + timestamp + '&rand=' + randomNumber;
+        // Generate a UUID-like value for better randomness
+        const uuid = Math.random().toString(36).substr(2, 9); // Simple random string
 
-        // Redirect to the randomly selected GIF
+        // Construct the URL with timestamp, random number, and UUID for better cache busting
+        const randomGifWithTimestamp = randomGif + '&t=' + timestamp + '&rand=' + randomNumber + '&uuid=' + uuid;
+
+        // Log the URL to the console for debugging
+        console.log("Redirecting to: " + randomGifWithTimestamp);
+
+        // Redirect to the randomly selected GIF with cache-busting parameters
         window.location.href = randomGifWithTimestamp;
     </script>
-</head>
-<body>
-    <p>Redirecting you to a random GIF...</p>
-</body>
-</html>
-console.log("Redirecting to: " + randomGifWithTimestamp);
