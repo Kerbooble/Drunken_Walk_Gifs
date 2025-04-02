@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random GIF Redirect</title>
     <script type="text/javascript">
-        // Array of your 4 GIF URLs from Google Drive
+        // Array of your GIF URLs from Google Drive
         const gifs = [
             "https://drive.google.com/uc?export=view&id=1w-l3xpbfEJ4vRnbE9P9qIQwVkHYapetg",
             "https://drive.google.com/uc?export=view&id=1NqaGZFgEyQdFT--IEaa69pmRRLaxzSmy",
@@ -16,10 +16,10 @@
         // Randomly pick a GIF from the array
         const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
 
-        // Append a timestamp to the URL to prevent caching
-        const randomGifWithTimestamp = `${randomGif}&t=${new Date().getTime()}`;
+        // Append a timestamp to the URL to avoid caching issues
+        const randomGifWithTimestamp = randomGif + '&t=' + new Date().getTime();
 
-        // Redirect to the chosen GIF with the timestamp to avoid caching
+        // Redirect to the chosen GIF with the timestamp appended to avoid cache
         window.location.href = randomGifWithTimestamp;
     </script>
 </head>
