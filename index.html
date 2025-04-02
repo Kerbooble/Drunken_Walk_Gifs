@@ -16,10 +16,10 @@
         // Randomly pick a GIF from the array
         const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
 
-        // Append a timestamp to the URL to avoid caching issues
-        const randomGifWithTimestamp = randomGif + '&t=' + new Date().getTime();
+        // Append a timestamp and random number to the URL to avoid caching issues
+        const randomGifWithTimestamp = randomGif + '&t=' + new Date().getTime() + '&rand=' + Math.random();
 
-        // Redirect to the chosen GIF with the timestamp appended to avoid cache
+        // Redirect to the randomly selected GIF
         window.location.href = randomGifWithTimestamp;
     </script>
 </head>
