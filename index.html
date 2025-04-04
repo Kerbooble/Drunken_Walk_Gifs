@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random GIF Redirect</title>
     <script type="text/javascript">
-        // Array of your GIF URLs from Google Drive
+        // Array of your GIF URLs
         const gifs = [
             "https://i.ibb.co/6c9r8tWR/drunk-walk-with-stickman-10.gif",
             "https://i.ibb.co/QSy2jck/drunk-walk-with-stickman-9.gif",
@@ -13,32 +13,24 @@
             "https://i.ibb.co/FtVtRg4/drunk-walk-with-stickman-7.gif",
             "https://i.ibb.co/WpD5fCpL/drunk-walk-with-stickman-6.gif",
             "https://i.ibb.co/PskTRCYx/drunk-walk-with-stickman-5.gif",
-            "https://i.ibb.co/99X4txCC/drunk-walk-with-stickman-4.gif,
+            "https://i.ibb.co/99X4txCC/drunk-walk-with-stickman-4.gif",
             "https://i.ibb.co/Q2RDjx6/drunk-walk-with-stickman-3.gif",
             "https://i.ibb.co/JwV5WYH9/drunk-walk-with-stickman-2.gif",
             "https://i.ibb.co/1t5r9j18/drunk-walk-with-briancox.gif",
             "https://i.ibb.co/4RR22Pv7/drunk-walk-with-stickman-1.gif"
         ];
 
-
-
-
         // Randomly pick a GIF from the array
         const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
 
-        // Generate a unique timestamp and random number
-        const timestamp = new Date().getTime();
-        const randomNumber = Math.random();
-
-        // Generate a UUID-like value for better randomness
-        const uuid = Math.random().toString(36).substr(2, 9); // Simple random string
-
-        // Construct the URL with timestamp, random number, and UUID for better cache busting
-        const randomGifWithTimestamp = randomGif + '&t=' + timestamp + '&rand=' + randomNumber + '&uuid=' + uuid;
-
         // Log the URL to the console for debugging
-        console.log("Redirecting to: " + randomGifWithTimestamp);
+        console.log("Redirecting to: " + randomGif);
 
-        // Redirect to the randomly selected GIF with cache-busting parameters
-        window.location.href = randomGifWithTimestamp;
+        // Redirect to the randomly selected GIF
+        window.location.href = randomGif;
     </script>
+</head>
+<body>
+    <h1>Redirecting to a Random GIF...</h1>
+</body>
+</html>
